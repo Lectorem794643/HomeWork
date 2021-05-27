@@ -1,19 +1,23 @@
-print('Инструкция: калькулятор - запущен, для остановки введите "STOP"')
+print('Инструкция: калькулятор - запущен, для остановки введите "STOP" или "x"')
 STOP = True
 while STOP:
     error_flag = True
-    sign = input("Какую операцию необходимо провести (+,-,/,*, Factorial, %) :")
-    if sign != '+' and sign != '-' and sign != '/' and sign != '*' and sign != 'Factorial' and sign != '%':
+    sign = input("Выберете операцию  (+,-,/,*, !, %, x) :")
+    if sign != '+' and sign != '-' and sign != '/' and sign != '*' and sign != '!' and sign != '%' and sign != 'x':
         print('НЕДОПУСТИМАЯ ОПЕРАЦИЯ')
         print('ERROR')
         error_flag = False
     if error_flag:
         a = int(input('Введите первое число :'))
-        if sign == 'Factorial':
+        if sign == '!':
             factorial = 1
             for i in range(1, a + 1):
                 factorial *= i
             print('Факториал =', factorial)
+        elif sign == 'x':
+            print(a)
+            print('Работа окончена, спасибо!')
+            break
         else:
             b = int(input("Введите второе число :"))
             if sign == '+':
