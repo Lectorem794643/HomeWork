@@ -1,8 +1,13 @@
 print('Инструкция: калькулятор - запущен, для остановки введите "STOP" или "x"')
 STOP = True
 while STOP:
-    error_flag = True
     sign = input("Выберете операцию  (+,-,/,*, !, %, x) :")
+    if sign == 'STOP':
+        STOP = False
+        print('Работа окончена, спасибо!')
+        break
+        # остановка командой стоп
+    error_flag = True
     if sign != '+' and sign != '-' and sign != '/' and sign != '*' and sign != '!' and sign != '%' and sign != 'x':
         print('НЕДОПУСТИМАЯ ОПЕРАЦИЯ')
         print('ERROR')
@@ -18,6 +23,7 @@ while STOP:
             print(a)
             print('Работа окончена, спасибо!')
             break
+            # остановка методом Яднекс
         else:
             b = int(input("Введите второе число :"))
             if sign == '+':
