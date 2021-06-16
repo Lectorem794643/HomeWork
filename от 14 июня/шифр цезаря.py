@@ -32,3 +32,4 @@ for _ in range(len(text)):
 # ABCDEFGHIJKLMNOPQRSTUVWXYZ
 # абвгдежзийклмнопрстуфхцчшщъыьэюя
 # АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+
