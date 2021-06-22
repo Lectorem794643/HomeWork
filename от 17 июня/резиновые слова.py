@@ -7,8 +7,19 @@ if len(word) % 2 == 0:
         print(' ' * (counter), word[counter], ((distance - counter) * 2) * ' ', word[counter_R])
         counter -= 1
         counter_R += 1
-if len(word) % 2 != 0:
+elif len(word) % 2 != 0:
+    print(' ' * (len(word) // 2 + 1), word[len(word) // 2])
+    counter = len(word) // 2
+    distance = 1
+    counter_R = len(word) - len(word) // 2
+    while counter > 0:
+        print(' ' * (counter - 1), word[counter - 1], ' ' * distance, word[counter_R])
+        distance += 2
+        counter -= 1
+        counter_R += 1
+else:
+    print('Error (мы работаем над этим)')
 
 
-
-#  синхрофазатрон
+# синхрофазатрон
+# рогатка
