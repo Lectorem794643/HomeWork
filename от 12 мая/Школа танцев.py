@@ -20,3 +20,6 @@ for i in range(repeat):
     ans = str(answer)
     print('Правильных отсчётов было', answer, ', но теперь вы ошиблись.')
 print('На сегодня хватит.')
+
+# WRONG
+# Тестируй на примерах

@@ -7,3 +7,6 @@ while Number != 0:
         line = i
     Number = int(input())
 print(line)
+
+# WRONG
+# Тестриуй на своих примерах. Не хватает проверки про «случилось в первый раз»

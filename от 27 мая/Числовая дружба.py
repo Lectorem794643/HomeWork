@@ -13,3 +13,5 @@ for i in range(1, 10000):
         comparison = i
     if i == n and i != k and i == comparison:
         print(i, k)
+
+# CORRECT

@@ -9,8 +9,27 @@ while questionNUMBER != 0:
         war = world
         if war == 'Евразия':
             world = 'Остазия'
-        if war :
+        if war:
             world = 'Евразия'
     else:
         print('Не знаю таких команд')
     question = str(input('что хотите знать?  '))
+
+# CORRECT/WRONG
+# С задачей формально справился, но не использовал пройденную логику:
+
+EurOct = True
+for i in range(int(input())):
+    Order = str(input())
+    if Order == 'С кем война?':
+        if EurOct:
+            print('Евразия')
+        else:
+            print('Остазия')
+    if Order == 'С кем мир?':
+        if EurOct:
+            print('Остазия')
+        else:
+            print('Евразия')
+    if Order == 'Меняем':
+        EurOct = not EurOct

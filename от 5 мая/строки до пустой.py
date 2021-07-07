@@ -6,3 +6,9 @@ while i != 1:
     else:
         i += 1
 print('end')
+
+# все то же, что и раньше + избыточное решение по end, пример:
+myString = str(input())
+while len(myString) != 0:
+    print(myString)
+    myString = str(input())

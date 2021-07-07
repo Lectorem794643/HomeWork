@@ -1,5 +1,4 @@
 phrase = str(input())
-how = int(input())
-for _ in range(how):
+for _ in range(int(input())):
     print(phrase)
-    how -= 1
+# аналогично прошлым прграммам — используй возможности итератора

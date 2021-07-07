@@ -1,10 +1,14 @@
-database = []
-question_list = []
+printString = True
+dataQuery, searchQuery = [], []
 for _ in range(int(input())):
-    database = [str(input())]
-for __ in range(int(input())):
-    question_list = [str(input())]
-for i in range(len(database)):
-    if question_list & database[i]:
-        print(i)
-# СЛОМАНО и не работает
+    dataQuery.append(str(input()))
+for _ in range(int(input())):
+    searchQuery.append(str(input()))
+for result in dataQuery:
+    for symbol in searchQuery:
+        if symbol not in result:
+            printString = False
+            break
+    if printString:
+        print(result)
+    printString = True

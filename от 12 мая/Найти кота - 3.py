@@ -1,5 +1,5 @@
 # Найти кота
-STR1 = False
+STR1 = False  # что за название переменной?
 line = input()
 lineONE = 1
 cat = 0
@@ -12,3 +12,6 @@ while line != 'СТОП':
         cat += 1
     line = input()
 print(lineONE, cat)
+
+# WRONG
+# Тестируй по примерам

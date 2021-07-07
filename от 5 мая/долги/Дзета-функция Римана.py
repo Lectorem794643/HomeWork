@@ -7,3 +7,5 @@ for i in range(1, number + 1):
     inverseSquare = 1 / i ** 2
     SUMinverseSquare += inverseSquare
 print((3.1415926535 ** 2) / SUMinverseSquare)
+
+# CORRECT

@@ -43,9 +43,6 @@ while STOP:
                 print('ответ =', c)
             elif sign == '%':
                 print('ответ =', a % b)
-            elif sign == 'STOP':
-                STOP = False
-            print('Операция завершена!')
     else:
         print('Операция превана, RESTART')
 print('Работа окончена, спасибо!')

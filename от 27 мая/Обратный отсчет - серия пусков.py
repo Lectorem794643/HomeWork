@@ -7,3 +7,6 @@ for _ in range(spaceship):
         sec -= 1
     print('Пуск!')
     countdown += 1
+
+# CORRECT ¹⁄₂
+# Где номер пуска?

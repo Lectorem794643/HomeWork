@@ -9,3 +9,5 @@ for i in range(len(string)):
             counter = new_counter
         new_counter = 0
 print(counter)
+
+# CORRECT

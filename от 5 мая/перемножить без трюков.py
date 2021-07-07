@@ -1,8 +1,9 @@
 # к сожалению он не дает называть переменные "soum" и \
 # "numeral" тк служебные команды
 
-suma = 1
+total = 1
 for _ in range(6):
-    nam = int(input('введите число'))
-    suma *= nam
-print(suma)
+    number = int(input('введите число'))
+    total *= number
+print(total)
+# все хорошо

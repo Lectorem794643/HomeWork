@@ -2,7 +2,7 @@ text = []
 number_of_rows = int(input())
 for _ in range(number_of_rows):
     text.append(str(input()))
-counter = 1
+counter = 1  # почему со счетчиком?
 while counter < len(text):
     for i in range(len(text) - counter):
         if len(text[i]) > len(text[i + 1]):

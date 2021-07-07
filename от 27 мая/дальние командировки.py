@@ -5,3 +5,5 @@ for M in range(1, N):
     if Sum >= N:
         print(M)
         break
+
+# CORRECT

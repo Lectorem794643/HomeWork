@@ -1,10 +1,11 @@
+calfPrice, cowPrice, bullPrice = 5, 10, 20
 credit = int(input())
 herd = int(input())
-for b in range(1, credit // 20 + 1):
-    for k in range((credit - b * 20) // 10 + 1):
-        t = herd - b - k
-        if b * 20 + k * 10 + t * 5 == credit:
-            print(b, k, t)
-# b - бык
-# k - корова
-# t - теленок
+for bullQuantity in range(1, credit // bullPrice + 1):
+    for cowQuantity in range((credit - bullQuantity * bullPrice) // cowPrice + 1):
+        calfQuantity = herd - bullQuantity - cowQuantity
+        if bullQuantity * bullPrice + cowQuantity * cowPrice + calfQuantity * calfPrice == credit:
+            print(bullQuantity, cowQuantity, calfQuantity)
+
+# CORRECT
+# Цены хорошо бы выносить в константы

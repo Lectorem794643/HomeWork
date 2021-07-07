@@ -20,3 +20,12 @@ for i in range(int(input())):
         flag = False
     if flag:
         print(string)
+
+# CORRECT, второй вариант вполне ок, но:
+
+for i in range(int(input())):
+    myString = str(input())
+    if '%%' in myString[0:2]:
+        print(myString[2:])
+    elif '####' not in myString[0:4]:
+        print(myString)

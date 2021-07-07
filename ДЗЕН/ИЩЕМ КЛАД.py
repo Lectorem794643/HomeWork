@@ -24,3 +24,5 @@ while instruction != 'стоп':
     if instruction != 'стоп':
         steps = int(input())
 print(n)
+
+# CORRECT

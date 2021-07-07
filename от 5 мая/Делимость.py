@@ -7,3 +7,10 @@ for _ in range(17):
     else:
         print('НЕТ')
         i += 1
+# ты использовал счетчик вместо того, чтобы использовать возможности цикла
+for number in range(0, 17):
+    modular = int(input())
+    if number % modular == 0:
+        print('ДА')
+    else:
+        print('НЕТ')

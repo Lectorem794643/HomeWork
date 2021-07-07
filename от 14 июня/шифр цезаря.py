@@ -33,3 +33,22 @@ for _ in range(len(text)):
 # абвгдежзийклмнопрстуфхцчшщъыьэюя
 # АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
 
+# EXP:
+
+russianAlphabetLowercase = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
+russianAlphabetUppercase = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+gap = int(input())
+myString = str(input())
+CaesarCipher = ""
+for i in myString:
+    if (chr(ord(i) + gap)) in russianAlphabetLowercase:
+        CaesarCipher += chr(ord(i) + gap)
+    elif (chr(ord(i) + gap)) in russianAlphabetUppercase:
+        CaesarCipher += chr(ord(i) + gap)
+    elif (chr(ord(i) - 32 + gap)) in russianAlphabetLowercase:
+        CaesarCipher += chr(ord(i) - 32 + gap)
+    elif (chr(ord(i) - 32 + gap)) in russianAlphabetUppercase:
+        CaesarCipher += chr(ord(i) - 32 + gap)
+    else:
+        CaesarCipher += i
+print(CaesarCipher)

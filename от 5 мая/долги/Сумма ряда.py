@@ -10,3 +10,12 @@ for i in range(1, rowLength + 1):
     else:
         Sum += number
 print(Sum)
+
+# CORRECT
+# Но старайся использовать уже пройденные приемы для того, чтобы делать код более лаконичным:
+
+sum = 0
+for i in range(int(input())):
+    number = int(input())
+    sum += ((-1) ** i) * number  # пойми вот этот приём
+print(sum)

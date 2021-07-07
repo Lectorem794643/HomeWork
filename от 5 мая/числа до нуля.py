@@ -6,3 +6,10 @@ while i != 1:
     else:
         i += 1
 print('end')
+
+# опять все то же, что и раньше + избыточность решения и сложность логики
+
+number = int(input())
+while number != 0:
+    print(number)
+    number = int(input())

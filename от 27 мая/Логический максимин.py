@@ -13,3 +13,4 @@ for _ in range(number_of_roads):
         height_MAX = height_MIN
         roads_X += 1
 print(roads_X, height_MAX)
+# CORRECT

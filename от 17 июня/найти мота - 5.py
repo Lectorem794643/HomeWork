@@ -3,3 +3,5 @@ for string_numbers in range(1, int(input()) + 1):
     for i in range(len(string)):
         if string[i:i+3] == 'кот':
             print(string_numbers, i + 1)
+
+# CORRECT, изящно
