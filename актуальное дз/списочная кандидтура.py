@@ -1,2 +1,2 @@
-EGOR = [print(i ** 2) for i in range(1, int(input()) + 1)]
+EGOR = [print(i ** 2) for i in range(int(input()))]
 # я не знаю как называть однострочные программы, пускай "егор"
