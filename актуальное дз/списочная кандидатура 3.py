@@ -1,3 +1,3 @@
-MyString = str(input()).split()
-EGOR = [print(int(MyString[i]) ** 2, end=' ') for i in range(len(MyString))]
-# я не знаю как называть однострочные программы, пускай "егор"
+numbers_for_squaring = str(input()).split()
+MAGICIAN = [print(int(numbers_for_squaring[i]) ** 2, end=' ') for i in range(len(numbers_for_squaring))]
+# я не знаю как называть однострочные программы, пускай "колдун"
