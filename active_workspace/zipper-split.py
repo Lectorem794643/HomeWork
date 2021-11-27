@@ -8,6 +8,6 @@ def splitter(string_to_split, string_splitted=[]):
 
 myString = '1110101001010100'
 zippedStringList = [digit[0] + '→' + str(len(digit)) for digit in splitter(myString)]
-print(splitter(myString), '\n', zippedStringList)
-zippedString = '; '.join(zippedStringList)
-print(zippedString)
+print('Это список, разделенный по одинаковым символам:\n', splitter(myString),
+      '\nЭто список с идентификаторами символов и их количеством:\n', zippedStringList,
+      '\nА это строка, склеенная через ;:\n', '; '.join(zippedStringList))
