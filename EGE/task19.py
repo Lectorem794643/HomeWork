@@ -27,10 +27,8 @@
 # первым ходом в случае неудачного первого хода Пети.
 
 def win_strategy(pile1, pile2, turn, finish):
-    if pile1 + pile2 >= 62 and turn == finish:
-        return True
-    elif pile1 + pile2 < 62 and turn == finish:
-        return False
+    if pile1 + pile2 >= 62 or turn > finish:
+        return turn == finish
     return win_strategy(pile1 + 1, pile2, turn + 1, finish) or \
            win_strategy(pile1 * 2, pile2, turn + 1, finish) or \
            win_strategy(pile1, pile2 + 1, turn + 1, finish) or \
