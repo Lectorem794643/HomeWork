@@ -28,20 +28,28 @@
 
 def win_strategy(pile1, pile2, turn, finish):
     if pile1 + pile2 >= 62 or turn > finish:
-        return turn == finish
-    return win_strategy(pile1 + 1, pile2, turn + 1, finish) or \
+            return turn == finish
+    if turn % 2 == 1:  # если нечетный ход (or для того, кто "умный")
+        return win_strategy(pile1 + 1, pile2, turn + 1, finish) or \
            win_strategy(pile1 * 2, pile2, turn + 1, finish) or \
            win_strategy(pile1, pile2 + 1, turn + 1, finish) or \
            win_strategy(pile1, pile2 * 2, turn + 1, finish)
+    else:  # если четный ход (and для того, кто "дурак")
+        return win_strategy(pile1 + 1, pile2, turn + 1, finish) and \
+               win_strategy(pile1 * 2, pile2, turn + 1, finish) and \
+               win_strategy(pile1, pile2 + 1, turn + 1, finish) and \
+               win_strategy(pile1, pile2 * 2, turn + 1, finish)
 
+
+# Задача 19
 for stones in range(60):
     if win_strategy(10, stones, 1, 2):
         print('Минимальное S, при которых '
               'Петя может выиграть первым ходом:', stones)
         break
 
+# Задача 20
+print('S, при которых Ваня может выиграть вторым ходом:', end=' ')
 for stones in range(60):
-    if win_strategy(10, stones, 1, 3):
-        print('Минимальное значение S, при котором '
-              'Ваня может выиграть первым ходом:', stones)
-        break
+    if win_strategy(10, stones, 1, 4):
+        print(stones, end='\t')
