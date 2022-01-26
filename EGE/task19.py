@@ -28,7 +28,7 @@
 
 def win_strategy(pile1, pile2, turn, finish):
     if pile1 + pile2 >= 62 or turn > finish:
-            return turn == finish
+        return turn == finish
     if turn % 2 == 1:  # если нечетный ход (or для того, кто "умный")
         return win_strategy(pile1 + 1, pile2, turn + 1, finish) or \
            win_strategy(pile1 * 2, pile2, turn + 1, finish) or \
@@ -49,7 +49,7 @@ for stones in range(60):
         break
 
 # Задача 20
-print('S, при которых Ваня может выиграть вторым ходом:', end=' ')
+print('Значения S, при которых Ваня может выиграть вторым ходом:', end=' ')
 for stones in range(60):
     if win_strategy(10, stones, 1, 4):
-        print(stones, end='\t')
+        print(stones, end=' ')
