@@ -1,14 +1,21 @@
-with open('24_demo.txt', 'r') as file:
-    data = file.read()
-maxLength = 1
-countLength = 1
-for i in range(len(data) - 1):
-    if data[i] != data[i + 1]:
-        countLength += 1
-        maxLength = max(maxLength, countLength)
-    else:
-        countLength = 1
-print(maxLength)
+# Задача 4
+# from re import findall
+# with open('24.txt', 'r') as file4:
+#     data = file4.read()
+# match = findall(r'A.', data)
+# frequent = max(set(match), key=match.count)
+# print(frequent[1])
 
-# А вот как можно написать эту программу в одну строку:
-# print(max(map(len, data.replace('XX', ' ').replace('YY', ' ').replace('ZZ', ' ').split())) + 1)
+# Задача 5
+from re import finditer
+with open('24_5.txt', 'r') as file5:
+    data = file5.read()
+    file5.close()
+match = finditer(r'([A-Z]).\1', data)
+gates, stats = [], []
+for match_obj in match:
+    gates.append(match_obj.group())
+for strings in gates:
+    stats.append(strings[1])
+print(max(set(stats), key=stats.count))
+
