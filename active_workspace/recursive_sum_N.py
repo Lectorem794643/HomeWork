@@ -16,4 +16,4 @@ def sum_of_n(summands, n, limit):
 
 
 N = int(input())
-sum_of_n([], N, N)
+sum_of_n([], N, N - 1)
