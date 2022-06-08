@@ -1,4 +1,4 @@
-Решение задачи последовательным перебором
+# Решение задачи последовательным перебором
 
 with open('24.txt', 'r') as file:
     bigString = str(file.read())
@@ -29,7 +29,7 @@ for letter in bigString[bigString.index('D') + 1:]:
 
 print(maxLength)
 
-Решение задачи нарезкой на отрезки
+# Решение задачи нарезкой на отрезки
 
 with open('24.txt', 'r') as file:
     betweenDSequences = [len(x) for x in file.read().split('D')]
